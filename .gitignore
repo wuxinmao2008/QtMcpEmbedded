@@ -28,3 +28,8 @@ examples/qt-ads/shots/
 # Qt app) — deliberately not committed for now
 examples/SRMStudioX/
 examples/SRMPostAnimator/
+
+# Article workspace lives on the `article` branch (private remote only). Ignore
+# its local leftovers here so they never leak into main: third-party literature
+# snapshots, benchmark run artifacts, ad-hoc scholar scrape configs.
+article/
