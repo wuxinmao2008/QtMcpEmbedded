@@ -22,6 +22,10 @@ if(MSVC)
     add_compile_options(/utf-8)
 endif()
 
+if(NOT CMAKE_PREFIX_PATH AND DEFINED ENV{QTDIR})
+    list(APPEND CMAKE_PREFIX_PATH "$ENV{QTDIR}")
+endif()
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network)
 
