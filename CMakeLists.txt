@@ -29,8 +29,11 @@ endif()
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network)
 
+option(QTMCP_BUILD_PLUGIN "Build Qt generic plugin for zero-code integration" ON)
+
 add_subdirectory(src)
 
 if(QTMCP_BUILD_EXAMPLES)
     add_subdirectory(examples/demo_app)
+    add_subdirectory(examples/unmodified_app)
 endif()
